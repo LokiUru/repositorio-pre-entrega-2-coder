@@ -1,0 +1,621 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*-----Página de inicio-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Agregado de color al body*/
+body {
+    background-color: #032552;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*Incluye el título, logotipo y la barra de navegación*/
+.menuprincipal {
+    width: 100%;
+    height: 3.75rem;
+    background-color: #032552;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3125rem;
+    align-content: center;
+    border-bottom: solid #ffffff;
+}
+
+/*Dentro de esta clase está contenido únicamente el logotipo, sin texto*/
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/*Contenedor con la imagen del logo*/
+.imagen_logo {
+    margin: 0.3125rem;
+}
+
+.imagen_logo img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/*Contenedor con el título de la página principal*/
+.texto_logo {
+    padding: 0.1875rem;
+    margin: 0.3125rem;
+
+}
+
+/*Trabajo sobre el texto principal*/
+.texto_logo h1 {
+    font-size: 1.25rem;
+    color: #ffffff;
+    align-content: center;
+}
+
+
+/*Incluye la barra de navegación y la lista de ítems*/
+.barra_navegacion {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    list-style: none;
+    justify-content: flex-end;
+
+}
+
+/*Trabajo sobre los ítems de enlace a otras páginas de la web*/
+.barra_navegacion ul {
+    display: flex;
+    list-style: none;
+    background-color: #032552;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    height: 100%;
+}
+
+.barra_navegacion ul li {
+    display: flex;
+    background-color: #032552;
+    justify-content: flex-end;
+    text-decoration: none;
+    align-items: center;
+    margin: 0.3125rem;
+    height: 100%;
+    width: 12.5rem;
+}
+
+/*Contiene los elementos a de la barra de navegación*/
+.lista_navegacion li a {
+    text-decoration: none;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease;
+}
+
+/*Animación para los elementos de la barra de navegación que están linkeados a otras página html*/
+.lista_navegacion a:hover {
+    transform: scale(1.2);
+    background-color: #559cf9;
+}
+
+/*Trabajo sobre el botón de login ubicado en el nav*/
+.btn_login {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.625rem;
+}
+
+.btn_log {
+    background-color: #ffffff;
+    width: 6.25rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid #0a71f7;
+    border-radius: 0.5rem;
+    margin: 0.625rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: all 300ms ease;
+}
+
+/*Animación para el botón de login, se compone de dos partes, texto y fondo del botón*/
+.btn_log:hover {
+    background: #0a71f7;
+    transform: scale(1.1);
+    border: solid #ffffff;
+}
+
+.btn_log a:hover {
+    color: #ffffff;
+}
+
+.btn_log a {
+    text-decoration: none;
+    color: #559cf9;
+    transition: all 300ms ease;
+}
+
+/*Trabajo sobre el contenedor central y la imagen principal de la página de inicio*/
+main {
+    /*Gradiente extraído de cssgradient*/
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    width: 100%;
+    height: 53.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Trabajo sobre imagen central de la página de inicio*/
+.imagen_central {
+    width: 31.25rem;
+    height: 31.25rem;
+}
+
+/*Sección de información*/
+.seccion_informacion {
+    background-color: #E2E2E2;
+}
+
+.seccion1 {
+    width: 100%;
+    max-height: 18.75rem;
+    background-color: #E2E2E2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.informacion {
+    width: 40%;
+    height: 14.0625rem;
+    background-color: #C9D6FF;
+    border-radius: 2.5rem;
+    box-shadow: 0rem 0.3125rem 0.625rem #000428;
+    margin: 2.1875rem;
+}
+
+.informacion p {
+    margin: 1.875rem;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.informacion h1 {
+    text-align: center;
+}
+
+.imagen_info1 {
+    width: 40%;
+    max-height: 18.75rem;
+    background-color: #C9D6FF;
+    border-radius: 2.5rem;
+    box-shadow: 0rem 0.3125rem 0.625rem #000428;
+    display: grid;
+    justify-content: center;
+}
+
+.imagen_info1 img {
+    background-image: cover;
+    height: 14.0625rem;
+    margin: 0.3125rem;
+}
+
+/*Pie de página*/
+.pie_pagina {
+    width: 100%;
+    max-height: 40rem;
+    background-color: #000428;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+    border-top: #ffffff solid 0.1875rem;
+    align-items: center;
+}
+
+/*Contiene el descargo de responsabilidad*/
+
+.descargo_responsabilidad {
+    background-color: #C9D6FF;
+    color: #000428;
+max-height: 100%;    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    margin: 2%;
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    box-shadow: inset 0rem 0.1875rem 0.1875rem 0.1875rem;
+}
+
+.descargo_responsabilidad h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.descargo_responsabilidad p {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+/*Trabajo sobre el logo incluido en el footer de la página*/
+.logo_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000428;
+}
+
+.logo_footer img {
+
+    width: 18.75rem;
+
+}
+
+/*Cotiene los enlaces a redes sociales*/
+
+.contenedor_redessociales {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+
+}
+
+.redes_sociales {
+    margin: 1.25rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.redes_sociales li {
+    background-color: #000428;
+    list-style: none;
+    text-decoration: none;
+    margin: 0.625rem;
+}
+
+.redes_sociales a {
+    padding: 0.3125rem;
+}
+
+.redes_sociales img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    margin-right: 0.625rem;
+}
+
+
+/*-----Página ¿Por qué Derecho Libre?---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Trabajo sobre aspecto general del contenedor*/
+.contenedor_central_derecholibre {
+    justify-content: center;
+    align-items: center;
+}
+
+/*Comienzo de trabajo sobre el div izquierdo de la página, contiene el texto informativo bajo la etiqueta section*/
+
+/*Aspecto general de la sección de texto*/
+.parteizquierda_texto {
+    max-width: 31.25rem;
+    justify-content: left;
+}
+
+/*Pimer subtitulo del artícul*/
+.articulo1_derecholibre h3 {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.25rem;
+
+}
+
+/*Título del artículo*/
+.articulo1_derecholibre h1 {
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.625rem;
+    font-size: 2.5rem;
+}
+
+/*Párrafo de texto del artículo*/
+.articulo1_derecholibre p {
+    text-align: justify;
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+/*-----Página Consultar---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Aspectos generales del contenedor que aloja el formulario de consulta*/
+.contenedor_central_consulta {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 40% 40%;
+}
+
+/*Trabajo aspectosgenerales del formulario de consulta*/
+.formulario_ingresoconsulta {
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 80%;
+}
+
+/*Trabajo sobre área de texto*/
+#textoprincipal_formulario {
+    font-weight: bold;
+    margin: 0.1875rem;
+}
+
+#lista_temas {
+    text-align: center;
+    border: 0.125rem solid #000428;
+    box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.0625rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.625rem;
+}
+
+
+#area_texto {
+    border-radius: 0.5rem;
+    margin-bottom: 0.625rem;
+    border: 0.125rem solid #000428;
+    box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.0625rem;
+    padding: 0.3125rem;
+    background-color: #C9D6FF;
+}
+
+/*Trabajo botones de formulario consulta*/
+.botones1_2 {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.botones1_2 input {
+    border: 0.125rem solid #032552;
+    border-radius: 0.5rem;
+    width: 20%;
+    height: 150%;
+}
+
+
+/*Trabajo sobre advertencia a la derecha del contenedor central. También se aplica esta clase a la advertencia ubicada en la página foro.html*/
+.advertencia_consulta {
+    border-radius: 1.875rem;
+    max-width: 31.25rem;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 31.25rem;
+    align-items: center;
+    box-shadow: 0.3125rem 0.3125rem 1.25rem #000428;
+    transition: all 300ms ease;
+}
+
+/*Animación de cambio de tamaño para advertencia*/
+.advertencia_consulta:hover {
+    transform: scale(1.1);
+}
+
+.advertencia_datos {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    border-top-left-radius: 0.9375rem;
+    border-bottom-left-radius: 0.9375rem;
+    /*Color gradiente para fondo extraído de uigradients con el nombre de Dull*/
+    background: #C9D6FF;
+    background: -webkit-linear-gradient(to bottom, #E2E2E2, #C9D6FF);
+    background: linear-gradient(to bottom, #E2E2E2, #C9D6FF);
+
+}
+
+.advertencia_consulta h3 {
+    font-size: 1.25rem;
+}
+
+.advertencia_consulta h1 {
+    margin-bottom: 0.625rem;
+    font-size: 2.5rem;
+}
+
+.advertencia_consulta p {
+    font-size: 1.25rem;
+}
+
+.imagen_article {
+    display: grid;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 0.9375rem;
+    border-bottom-right-radius: 0.9375rem;
+    /*Color gradiente para fondo extraído de uigradients con el nombre de Cool Blues*/
+    background: #2193b0;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #6dd5ed, #2193b0);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+}
+
+#imagen_advertencia_consulta {
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+/*-----Página Foro---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Aspectos generales del contenedor que contiene la tabla y la advertencia*/
+.contenedor_central_respuesta {
+    background-color: #559cf9;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Ubicado del lado izquierdo, contiene tabla, lista desplegable y botón*/
+.contenedor_respuestas {
+    width: 25rem;
+    margin-right: 5rem;
+}
+
+#textoprincipal_respuesta {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 0.1875rem;
+}
+
+/*Trabajo sobre la tabla*/
+.tabla_consultas {
+    background-color: #559cf9;
+    margin-top: 0.625rem;
+    border-collapse: collapse;
+    border: 0.125rem solid #ffff;
+    letter-spacing: 0.0625rem;
+}
+
+.tabla_consultas td,
+th {
+    border: 0.125rem solid #ffff;
+    padding: 0.9375rem;
+}
+
+/*Trabajo sobre el botón responder*/
+.boton3 input {
+    border: 0.125rem solid #ff9040;
+    border-radius: 0.5rem;
+    margin: 0.4375rem;
+    width: 5rem;
+    height: 1.5625rem;
+}
+
+/*Trabajo sobre advertencia a la derecha del contenedor central*/
+.advertencia_respuesta {
+    border: 0.5rem solid #ff9040;
+    border-radius: 0.625rem;
+    padding: 0.3125rem;
+    margin: 3.125rem;
+    max-width: 31.25rem;
+    justify-content: right;
+}
+
+.advertencia_respuesta h3 {
+    font-size: 1.25rem;
+}
+
+.advertencia_respuesta h1 {
+    margin-bottom: 0.625rem;
+    font-size: 2.5rem;
+}
+
+.advertencia_respuesta p {
+    text-align: justify;
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+/*-----Página Estadísticas---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Aspectos generales del contenedor central*/
+.contenedor_central_estadisticas {
+    background-color: #0a71f7;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Trabajo sobre las tarjetas informativas*/
+.tarjeta {
+    position: relative;
+    width: 18.75rem;
+    height: 25rem;
+    margin: 3.125rem;
+}
+
+/*Aspecto general de las cartas*/
+.tarjeta .aspecto {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    transition: .5s;
+}
+
+/*Trabajo sobre la parte frontal de las cartas*/
+.tarjeta .frente {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0rem 0.3125rem 0.625rem #000428;
+}
+
+.tarjeta .frente h3 {
+    color: #000428;
+    width: 100%;
+    height: 30%;
+    font-size: 1.5625rem;
+    margin-top: 1.25rem;
+    position: absolute;
+    text-align: center;
+}
+
+.tarjeta .frente img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Trabajo sobre la parta trasera de las cartas*/
+.tarjeta .trasera {
+    transform: perspective(37.5rem) rotateY(180deg);
+    background-color: #C9D6FF;
+    padding: 1.25rem;
+    color: #000428;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.tarjeta .trasera p {
+    position: absolute;
+    text-align: left;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/*Animación de rotación de las cartas*/
+.tarjeta:hover .frente {
+    transform: perspective(37.5rem) rotateY(180deg);
+}
+
+.tarjeta:hover .trasera {
+    transform: perspective(37.5rem) rotateY(360deg);
+}
+
