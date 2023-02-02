@@ -108,7 +108,8 @@ body {
     background-color: #559cf9;
 }
 
-/*Trabajo sobre el botón de login ubicado en el nav*/
+/*Trabajo sobre el botón de login ubicado en el nav. El botón activa el despliegue de la 
+ventana modal que permite el login (ventana creada con bootstrap)*/
 .btn_login {
     width: 10%;
     height: 100%;
@@ -119,7 +120,7 @@ body {
 }
 
 .btn_log {
-    background-color: #ffffff;
+    background-color: #0a71f7;
     width: 6.25rem;
     height: 100%;
     display: flex;
@@ -135,19 +136,10 @@ body {
 
 /*Animación para el botón de login, se compone de dos partes, texto y fondo del botón*/
 .btn_log:hover {
-    background: #0a71f7;
+    background: #ffffff;
+    color: #0a71f7;
     transform: scale(1.1);
-    border: solid #ffffff;
-}
-
-.btn_log a:hover {
-    color: #ffffff;
-}
-
-.btn_log a {
-    text-decoration: none;
-    color: #559cf9;
-    transition: all 300ms ease;
+    border: solid #0a71f7;
 }
 
 /*Trabajo sobre el contenedor central y la imagen principal de la página de inicio*/

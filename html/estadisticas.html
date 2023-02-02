@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
@@ -37,7 +38,10 @@
         </nav>
         <!--Botón para Login-->
         <div class="btn_login">
-            <div class="btn_log"><a href="">Login</a></div>
+            <button type="button" class="btn btn-primary btn_login btn_log" data-bs-toggle="modal"
+                data-bs-target="#modalparalogin">
+                Login
+            </button>
         </div>
     </header>
     <!--Contendor con las tarjetas de información-->
@@ -61,7 +65,8 @@
                 <h3>Infancia</h3>
             </div>
             <div class="aspecto trasera">
-                <p>UNICEF trabaja para lograr un sistema de justicia penal juvenil que respete y considere los derechos de niños, niñas y adolescentes en conflicto con la ley.</p>
+                <p>UNICEF trabaja para lograr un sistema de justicia penal juvenil que respete y considere los derechos
+                    de niños, niñas y adolescentes en conflicto con la ley.</p>
             </div>
         </div>
         <!--Tarjeta 3 del contenedor-->
@@ -71,11 +76,41 @@
                 <h3>Derechos humanos</h3>
             </div>
             <div class="aspecto trasera">
-                <p>Los derechos humanos son, herramientas que se utilizan para la construcción de la dignidad humana. 
-                    Como tales, son mejores cuando están bien definidos y acotados, cuando se sabe  con claridad  
-                    cuál  es el  bien  que  protegen,  cuáles son los medios  o garantías de esa protección legal y cuáles las obligaciones que los Estados tienen frente a  la  población.</p>
+                <p>Los derechos humanos son, herramientas que se utilizan para la construcción de la dignidad humana.
+                    Como tales, son mejores cuando están bien definidos y acotados, cuando se sabe con claridad
+                    cuál es el bien que protegen, cuáles son los medios o garantías de esa protección legal y cuáles las
+                    obligaciones que los Estados tienen frente a la población.</p>
             </div>
         </div>
+         <!--Ventana Modal de logueo creada con bootstrap-->
+         <div class="modal fade" id="modalparalogin" tabindex="-1" role="dialog" aria-labelledby="etiqueta_modal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header text-center">
+                  <h1 class="modal-title fs-5" id="etiqueta_modal">Login</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          
+                <div class="modal-body mx-4">
+                  <div class="md-form">
+                    <input type="email" class="form-control validate">
+                    <label data-error="wrong" data-success="right">Ingresa tu email</label>
+                  </div>
+                </div>
+                <div class="modal-body mx-4">
+                  <div class="md-form">
+                    <input type="password" class="form-control validate">
+                    <label data-error="wrong" data-success="right">Contraseña</label>
+                  </div>
+                  <p class="font-small blue-text d-flex justify-content-center"><a href="#" class="blue-text ml-1">¿Olvidaste tu contraseña?</a></p>
+                  <p class="font-small blue-text d-flex justify-content-center"><a href="#" class="blue-text ml-1">Registrate</a></p>
+                </div>
+                <div class="modal-footer mb-3 d-flex justify-content-center">
+                  <button type="button" class="btn btn-primary">Iniciar Sesión</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </main>
     <!--Pie de página que incluye redes sociales y descargo de responsabilidad-->
     <footer class="pie_pagina">
@@ -108,7 +143,9 @@
         </div>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
