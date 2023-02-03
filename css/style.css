@@ -142,6 +142,19 @@ ventana modal que permite el login (ventana creada con bootstrap)*/
     border: solid #0a71f7;
 }
 
+/*Menú hamburguesa*/
+.boton_check {
+    font-size: 2.1875rem;
+    color: #E2E2E2;
+    margin-right: 0.9375rem;
+    cursor: pointer;
+    display: none;
+}
+
+#okey {
+    display: none;
+}
+
 /*Trabajo sobre el contenedor central y la imagen principal de la página de inicio*/
 main {
     /*Gradiente extraído de cssgradient*/
@@ -167,7 +180,7 @@ main {
 
 .seccion1 {
     width: 100%;
-    max-height: 18.75rem;
+    max-height: 24rem;
     background-color: #E2E2E2;
     display: flex;
     align-items: center;
@@ -226,7 +239,8 @@ main {
 .descargo_responsabilidad {
     background-color: #C9D6FF;
     color: #000428;
-max-height: 100%;    display: flex;
+    max-height: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: justify;
@@ -297,317 +311,418 @@ max-height: 100%;    display: flex;
     margin-right: 0.625rem;
 }
 
+/*Media queryes para el responsive de la página, se encuentran todas aquí*/
 
-/*-----Página ¿Por qué Derecho Libre?---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Trabajo sobre aspecto general del contenedor*/
-.contenedor_central_derecholibre {
-    justify-content: center;
-    align-items: center;
+@media (max-width: 1477px) {
+    .lista_navegacion li a {
+        width: 8rem;
+        font-size: 0.9rem;
+    }
+
+    .btn_log {
+        font-size: 1rem;
+    }
+
+    .informacion {
+        height: 18rem;
+    }
+
+    .imagen_info1 {
+        height: 18rem;
+    }
+
+    .descargo_responsabilidad h3 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
 }
 
-/*Comienzo de trabajo sobre el div izquierdo de la página, contiene el texto informativo bajo la etiqueta section*/
+@media (max-width: 1240px) {
+    .imagen_logo {
+        display: none;
+    }
 
-/*Aspecto general de la sección de texto*/
-.parteizquierda_texto {
-    max-width: 31.25rem;
-    justify-content: left;
+    .logo {
+        width: 15rem;
+        margin-right: 0px;
+    }
+
+    .barra_navegacion {
+        width: 50%;
+    }
+
+    .barra_navegacion ul li {
+        width: 9rem;
+        margin: 0.2rem;
+    }
+
+    .logo_footer img {
+        width: 16rem;
+    }
 }
 
-/*Pimer subtitulo del artícul*/
-.articulo1_derecholibre h3 {
-    font-weight: bold;
-    color: #ffffff;
-    font-size: 1.25rem;
+@media (max-width: 1190px) {
+    .informacion {
+        height: 20rem;
+    }
+    .imagen_info1{
+        max-height: 20rem;
+        height: 20rem;
+    }
+    .descargo_responsabilidad h3 {
+        font-size: 1rem;
+    }
 
+    .logo_footer img {
+        width: 15rem;
+    }
+
+    .texto_logo {
+        padding: 0.15rem;
+        margin: 0.15rem;
 }
 
-/*Título del artículo*/
-.articulo1_derecholibre h1 {
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 0.625rem;
-    font-size: 2.5rem;
-}
+    @media (max-width: 1040px) {
+        .boton_check { 
+            display: block;
+        }
+        .barra_navegacion {
+            position: fixed;
+            width: 70%;
+            height: 75vh;
+            background: #032552;
+            margin-top: 3.75rem;
+            text-align: center;
+            transition: all 0.5s;
+        }
+        .barra_navegacion ul li {
+            display: block;
+            margin: 3.125rem;
+            line-height: 1.875rem;
+        }
+        .barra_navegacion li a {
+            font-size: 1.25rem;
+        }
+        .barra_navegacion li a:hover {
+            background: none;
+            color: red;
+        }
+        #okey:checked ~ .barra_navegacion  {
+            left: 0%;   
+        }
+        .imagen_central { display: none;}
+    }
 
-/*Párrafo de texto del artículo*/
-.articulo1_derecholibre p {
-    text-align: justify;
-    color: #ffffff;
-    font-size: 1.25rem;
-}
+    /*-----Página ¿Por qué Derecho Libre?---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    /*Trabajo sobre aspecto general del contenedor*/
+    .contenedor_central_derecholibre {
+        justify-content: center;
+        align-items: center;
+    }
 
-/*-----Página Consultar---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    /*Comienzo de trabajo sobre el div izquierdo de la página, contiene el texto informativo bajo la etiqueta section*/
 
-/*Aspectos generales del contenedor que aloja el formulario de consulta*/
-.contenedor_central_consulta {
-    justify-content: center;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 40% 40%;
-}
+    /*Aspecto general de la sección de texto*/
+    .parteizquierda_texto {
+        max-width: 31.25rem;
+        justify-content: left;
+    }
 
-/*Trabajo aspectosgenerales del formulario de consulta*/
-.formulario_ingresoconsulta {
-    border-radius: 0.5rem;
-    font-size: 1.25rem;
-    color: #ffffff;
-    display: grid;
-    grid-template-columns: 80%;
-}
+    /*Pimer subtitulo del artícul*/
+    .articulo1_derecholibre h3 {
+        font-weight: bold;
+        color: #ffffff;
+        font-size: 1.25rem;
 
-/*Trabajo sobre área de texto*/
-#textoprincipal_formulario {
-    font-weight: bold;
-    margin: 0.1875rem;
-}
+    }
 
-#lista_temas {
-    text-align: center;
-    border: 0.125rem solid #000428;
-    box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.0625rem;
-    border-radius: 0.5rem;
-    margin-bottom: 0.625rem;
-}
+    /*Título del artículo*/
+    .articulo1_derecholibre h1 {
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 0.625rem;
+        font-size: 2.5rem;
+    }
 
+    /*Párrafo de texto del artículo*/
+    .articulo1_derecholibre p {
+        text-align: justify;
+        color: #ffffff;
+        font-size: 1.25rem;
+    }
 
-#area_texto {
-    border-radius: 0.5rem;
-    margin-bottom: 0.625rem;
-    border: 0.125rem solid #000428;
-    box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.0625rem;
-    padding: 0.3125rem;
-    background-color: #C9D6FF;
-}
+    /*-----Página Consultar---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*Trabajo botones de formulario consulta*/
-.botones1_2 {
-    display: flex;
-    justify-content: space-evenly;
+    /*Aspectos generales del contenedor que aloja el formulario de consulta*/
+    .contenedor_central_consulta {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 40% 40%;
+    }
 
-}
+    /*Trabajo aspectosgenerales del formulario de consulta*/
+    .formulario_ingresoconsulta {
+        border-radius: 0.5rem;
+        font-size: 1.25rem;
+        color: #ffffff;
+        display: grid;
+        grid-template-columns: 80%;
+    }
 
-.botones1_2 input {
-    border: 0.125rem solid #032552;
-    border-radius: 0.5rem;
-    width: 20%;
-    height: 150%;
-}
+    /*Trabajo sobre área de texto*/
+    #textoprincipal_formulario {
+        font-weight: bold;
+        margin: 0.1875rem;
+    }
 
-
-/*Trabajo sobre advertencia a la derecha del contenedor central. También se aplica esta clase a la advertencia ubicada en la página foro.html*/
-.advertencia_consulta {
-    border-radius: 1.875rem;
-    max-width: 31.25rem;
-    display: grid;
-    grid-template-columns: 60% 40%;
-    height: 31.25rem;
-    align-items: center;
-    box-shadow: 0.3125rem 0.3125rem 1.25rem #000428;
-    transition: all 300ms ease;
-}
-
-/*Animación de cambio de tamaño para advertencia*/
-.advertencia_consulta:hover {
-    transform: scale(1.1);
-}
-
-.advertencia_datos {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    text-align: center;
-    border-top-left-radius: 0.9375rem;
-    border-bottom-left-radius: 0.9375rem;
-    /*Color gradiente para fondo extraído de uigradients con el nombre de Dull*/
-    background: #C9D6FF;
-    background: -webkit-linear-gradient(to bottom, #E2E2E2, #C9D6FF);
-    background: linear-gradient(to bottom, #E2E2E2, #C9D6FF);
-
-}
-
-.advertencia_consulta h3 {
-    font-size: 1.25rem;
-}
-
-.advertencia_consulta h1 {
-    margin-bottom: 0.625rem;
-    font-size: 2.5rem;
-}
-
-.advertencia_consulta p {
-    font-size: 1.25rem;
-}
-
-.imagen_article {
-    display: grid;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    border-top-right-radius: 0.9375rem;
-    border-bottom-right-radius: 0.9375rem;
-    /*Color gradiente para fondo extraído de uigradients con el nombre de Cool Blues*/
-    background: #2193b0;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #6dd5ed, #2193b0);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    #lista_temas {
+        text-align: center;
+        border: 0.125rem solid #000428;
+        box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.0625rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.625rem;
+    }
 
 
+    #area_texto {
+        border-radius: 0.5rem;
+        margin-bottom: 0.625rem;
+        border: 0.125rem solid #000428;
+        box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.0625rem;
+        padding: 0.3125rem;
+        background-color: #C9D6FF;
+    }
+
+    /*Trabajo botones de formulario consulta*/
+    .botones1_2 {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    .botones1_2 input {
+        border: 0.125rem solid #032552;
+        border-radius: 0.5rem;
+        width: 20%;
+        height: 150%;
+    }
 
 
-}
+    /*Trabajo sobre advertencia a la derecha del contenedor central. También se aplica esta clase a la advertencia ubicada en la página foro.html*/
+    .advertencia_consulta {
+        border-radius: 1.875rem;
+        max-width: 31.25rem;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        height: 31.25rem;
+        align-items: center;
+        box-shadow: 0.3125rem 0.3125rem 1.25rem #000428;
+        transition: all 300ms ease;
+    }
 
-#imagen_advertencia_consulta {
-    width: 12.5rem;
-    height: 12.5rem;
-}
+    /*Animación de cambio de tamaño para advertencia*/
+    .advertencia_consulta:hover {
+        transform: scale(1.1);
+    }
 
-/*-----Página Foro---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Aspectos generales del contenedor que contiene la tabla y la advertencia*/
-.contenedor_central_respuesta {
-    background-color: #559cf9;
-    justify-content: center;
-    align-items: center;
-}
+    .advertencia_datos {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        text-align: center;
+        border-top-left-radius: 0.9375rem;
+        border-bottom-left-radius: 0.9375rem;
+        /*Color gradiente para fondo extraído de uigradients con el nombre de Dull*/
+        background: #C9D6FF;
+        background: -webkit-linear-gradient(to bottom, #E2E2E2, #C9D6FF);
+        background: linear-gradient(to bottom, #E2E2E2, #C9D6FF);
 
-/*Ubicado del lado izquierdo, contiene tabla, lista desplegable y botón*/
-.contenedor_respuestas {
-    width: 25rem;
-    margin-right: 5rem;
-}
+    }
 
-#textoprincipal_respuesta {
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: 0.1875rem;
-}
+    .advertencia_consulta h3 {
+        font-size: 1.25rem;
+    }
 
-/*Trabajo sobre la tabla*/
-.tabla_consultas {
-    background-color: #559cf9;
-    margin-top: 0.625rem;
-    border-collapse: collapse;
-    border: 0.125rem solid #ffff;
-    letter-spacing: 0.0625rem;
-}
+    .advertencia_consulta h1 {
+        margin-bottom: 0.625rem;
+        font-size: 2.5rem;
+    }
 
-.tabla_consultas td,
-th {
-    border: 0.125rem solid #ffff;
-    padding: 0.9375rem;
-}
+    .advertencia_consulta p {
+        font-size: 1.25rem;
+    }
 
-/*Trabajo sobre el botón responder*/
-.boton3 input {
-    border: 0.125rem solid #ff9040;
-    border-radius: 0.5rem;
-    margin: 0.4375rem;
-    width: 5rem;
-    height: 1.5625rem;
-}
+    .imagen_article {
+        display: grid;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        border-top-right-radius: 0.9375rem;
+        border-bottom-right-radius: 0.9375rem;
+        /*Color gradiente para fondo extraído de uigradients con el nombre de Cool Blues*/
+        background: #2193b0;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #6dd5ed, #2193b0);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-/*Trabajo sobre advertencia a la derecha del contenedor central*/
-.advertencia_respuesta {
-    border: 0.5rem solid #ff9040;
-    border-radius: 0.625rem;
-    padding: 0.3125rem;
-    margin: 3.125rem;
-    max-width: 31.25rem;
-    justify-content: right;
-}
 
-.advertencia_respuesta h3 {
-    font-size: 1.25rem;
-}
 
-.advertencia_respuesta h1 {
-    margin-bottom: 0.625rem;
-    font-size: 2.5rem;
-}
 
-.advertencia_respuesta p {
-    text-align: justify;
-    color: #ffffff;
-    font-size: 1.25rem;
-}
+    }
 
-/*-----Página Estadísticas---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Aspectos generales del contenedor central*/
-.contenedor_central_estadisticas {
-    background-color: #0a71f7;
-    justify-content: center;
-    align-items: center;
-}
+    #imagen_advertencia_consulta {
+        width: 12.5rem;
+        height: 12.5rem;
+    }
 
-/*Trabajo sobre las tarjetas informativas*/
-.tarjeta {
-    position: relative;
-    width: 18.75rem;
-    height: 25rem;
-    margin: 3.125rem;
-}
+    /*-----Página Foro---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    /*Aspectos generales del contenedor que contiene la tabla y la advertencia*/
+    .contenedor_central_respuesta {
+        background-color: #559cf9;
+        justify-content: center;
+        align-items: center;
+    }
 
-/*Aspecto general de las cartas*/
-.tarjeta .aspecto {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 1.25rem;
-    overflow: hidden;
-    transition: .5s;
-}
+    /*Ubicado del lado izquierdo, contiene tabla, lista desplegable y botón*/
+    .contenedor_respuestas {
+        width: 25rem;
+        margin-right: 5rem;
+    }
 
-/*Trabajo sobre la parte frontal de las cartas*/
-.tarjeta .frente {
-    transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0rem 0.3125rem 0.625rem #000428;
-}
+    #textoprincipal_respuesta {
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 0.1875rem;
+    }
 
-.tarjeta .frente h3 {
-    color: #000428;
-    width: 100%;
-    height: 30%;
-    font-size: 1.5625rem;
-    margin-top: 1.25rem;
-    position: absolute;
-    text-align: center;
-}
+    /*Trabajo sobre la tabla*/
+    .tabla_consultas {
+        background-color: #559cf9;
+        margin-top: 0.625rem;
+        border-collapse: collapse;
+        border: 0.125rem solid #ffff;
+        letter-spacing: 0.0625rem;
+    }
 
-.tarjeta .frente img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    .tabla_consultas td,
+    th {
+        border: 0.125rem solid #ffff;
+        padding: 0.9375rem;
+    }
 
-/*Trabajo sobre la parta trasera de las cartas*/
-.tarjeta .trasera {
-    transform: perspective(37.5rem) rotateY(180deg);
-    background-color: #C9D6FF;
-    padding: 1.25rem;
-    color: #000428;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-}
+    /*Trabajo sobre el botón responder*/
+    .boton3 input {
+        border: 0.125rem solid #ff9040;
+        border-radius: 0.5rem;
+        margin: 0.4375rem;
+        width: 5rem;
+        height: 1.5625rem;
+    }
 
-.tarjeta .trasera p {
-    position: absolute;
-    text-align: left;
-    justify-content: center;
-    font-size: 1rem;
-}
+    /*Trabajo sobre advertencia a la derecha del contenedor central*/
+    .advertencia_respuesta {
+        border: 0.5rem solid #ff9040;
+        border-radius: 0.625rem;
+        padding: 0.3125rem;
+        margin: 3.125rem;
+        max-width: 31.25rem;
+        justify-content: right;
+    }
 
-/*Animación de rotación de las cartas*/
-.tarjeta:hover .frente {
-    transform: perspective(37.5rem) rotateY(180deg);
-}
+    .advertencia_respuesta h3 {
+        font-size: 1.25rem;
+    }
 
-.tarjeta:hover .trasera {
-    transform: perspective(37.5rem) rotateY(360deg);
-}
+    .advertencia_respuesta h1 {
+        margin-bottom: 0.625rem;
+        font-size: 2.5rem;
+    }
 
+    .advertencia_respuesta p {
+        text-align: justify;
+        color: #ffffff;
+        font-size: 1.25rem;
+    }
+
+    /*-----Página Estadísticas---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    /*Aspectos generales del contenedor central*/
+    .contenedor_central_estadisticas {
+        background-color: #0a71f7;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Trabajo sobre las tarjetas informativas*/
+    .tarjeta {
+        position: relative;
+        width: 18.75rem;
+        height: 25rem;
+        margin: 3.125rem;
+    }
+
+    /*Aspecto general de las cartas*/
+    .tarjeta .aspecto {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    /*Trabajo sobre la parte frontal de las cartas*/
+    .tarjeta .frente {
+        transform: perspective(600px) rotateY(0deg);
+        box-shadow: 0rem 0.3125rem 0.625rem #000428;
+    }
+
+    .tarjeta .frente h3 {
+        color: #000428;
+        width: 100%;
+        height: 30%;
+        font-size: 1.5625rem;
+        margin-top: 1.25rem;
+        position: absolute;
+        text-align: center;
+    }
+
+    .tarjeta .frente img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /*Trabajo sobre la parta trasera de las cartas*/
+    .tarjeta .trasera {
+        transform: perspective(37.5rem) rotateY(180deg);
+        background-color: #C9D6FF;
+        padding: 1.25rem;
+        color: #000428;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .tarjeta .trasera p {
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    /*Animación de rotación de las cartas*/
+    .tarjeta:hover .frente {
+        transform: perspective(37.5rem) rotateY(180deg);
+    }
+
+    .tarjeta:hover .trasera {
+        transform: perspective(37.5rem) rotateY(360deg);
+    }
